@@ -1,0 +1,437 @@
+<div
+  id="carouselExampleDark"
+  class="carousel carousel-dark slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner slider">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="../../../assets/2c.jpg" class="d-block w-100" alt="..." />
+      <div class="carousel-caption d-none d-md-block text-light fs-3">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../../../assets/77c.jpg" class="d-block w-100" alt="..." />
+      <div class="carousel-caption d-none d-md-block text-light">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../../assets/1c.jpg" class="d-block w-100" alt="..." />
+      <div class="carousel-caption d-none d-md-block text-light">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleDark"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleDark"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- About -->
+
+<section class="about">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <img
+            class="img-fluid img-thumbnail img-about"
+            src="../../../assets/a1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <h2 class="mb-4">
+            <span class="font-weight-bold text-danger">About Coffee</span>
+          </h2>
+          <p class="mb-3 text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis similique repudiandae est magnam fuga minima quisquam
+            impedit eum illum accusamus.
+          </p>
+          <p class="mb-3 text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            incidunt ducimus vero exercitationem magni dolorem amet enim
+            blanditiis quis asperiores optio assumenda, quo facilis. Tempora quo
+            aperiam provident eius animi.
+          </p>
+          <p class="mb-3 text-muted">
+            As of 2013, the metro carried nearly 4 million passengers per day.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+            optio velit dolore, amet corrupti distinctio reprehenderit dicta
+            nostrum cumque. Quo eos aut quis eveniet harum magnam accusamus fuga
+            odio nihil?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container bg-light p-2">
+  <h3 class="m-3 text-center text-danger">Coffee Lovers</h3>
+  <div class="container m-auto p-2 text-dark bg-opacity-25 p-4 m-4 text-center">
+    <img class="mb-2 imgS" [src]="imgSrc" alt="" />
+    <br />
+    <p class="m-auto p-5 w-50 text-center text">
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+      non suscipit facere commodi vero quod dolor tempora architecto modi
+      dolorum."
+    </p>
+    <button class="btn btn-outline-danger px-3" (click)="next()">
+      Slide
+    </button>
+  </div>
+  <br />
+  <br />
+</div>
+
+<div class="container">
+  <ul
+    class="nav nav-pills my-5 pt-5 d-flex justify-content-center"
+    id="pills-tab"
+    role="tablist"
+  >
+    <li class="nav-item " role="presentation">
+      <a
+        class="nav-link active"
+        id="pills-home-tab"
+        data-bs-toggle="pill"
+        href="#pills-all"
+        role="tab"
+        aria-controls="pills-all"
+        aria-selected="true"
+        >ALL</a
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link "
+        id="pills-profile-tab"
+        data-bs-toggle="pill"
+        href="#pills-movies"
+        role="tab"
+        aria-controls="pills-movies"
+        aria-selected="false"
+        >Coffee 1</a
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link "
+        id="pills-contact-tab"
+        data-bs-toggle="pill"
+        href="#pills-tv"
+        role="tab"
+        aria-controls="pills-tv"
+        aria-selected="false"
+        >Coffee 2</a
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link "
+        id="pills-contact-tab"
+        data-bs-toggle="pill"
+        href="#pills-ts"
+        role="tab"
+        aria-controls="pills-tv"
+        aria-selected="false"
+        >Coffee 3</a
+      >
+    </li>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <!-- All Trending -->
+    <div
+      class="tab-pane fade show active"
+      id="pills-all"
+      role="tabpanel"
+      aria-labelledby="pills-home-tab"
+    >
+    <!-- <div class="container bg-light p-3">
+      <h3 class="m-3 text-center text-danger">Coffee Lovers</h3>
+      <div class="container m-auto p-2 text-dark bg-opacity-25 p-4 m-4 text-center">
+        <img class="mb-2 imgS" [src]="imgSrc" alt="" />
+        <br />
+        <p class="m-auto p-5 w-50 text-center text">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger m-1 px-3" (click)="next()">
+          Slide
+        </button>
+      </div>
+      <br />
+      <br />
+    </div> -->
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img class="mb-2 img-fluid rounded-3" src="../../../assets/6cc.jpg" alt="" />
+        <br />
+        <p class="m-2 text-center">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+          Info
+        </button>
+        </div>  
+
+        <div class="col-md-4 text-center">
+          <img class="mb-2 img-fluid rounded-3" src="../../../assets/2c.jpg" alt="" />
+        <br />
+        <p class="m-2 text-center">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+          Info
+        </button>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <img class="mb-2 img-fluid rounded-3" src="../../../assets/6cc.jpg" alt="" />
+        <br />
+        <p class="m-2 text-center">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+          Info
+        </button>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <img class="mb-2 img-fluid rounded-3" src="../../../assets/2c.jpg" alt="" />
+        <br />
+        <p class="m-2 text-center">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger px-3" (click)="next()">
+          Info
+        </button>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <img class="mb-2 img-fluid rounded-3" src="../../../assets/7cc.jpg" alt="" />
+        <br />
+        <p class="m-2 text-center">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+          Info
+        </button>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <img class="mb-2 img-fluid rounded-3" src="../../../assets/7cc.jpg" alt="" />
+        <br />
+        <p class="m-2 text-center">
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          non suscipit facere commodi vero quod dolor tempora architecto modi
+          dolorum."
+        </p>
+        <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+          Info
+        </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Trending Movies -->
+    <div
+      class="tab-pane fade"
+      id="pills-movies"
+      role="tabpanel"
+      aria-labelledby="pills-profile-tab"
+    >
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/6cc.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>  
+
+     
+
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/6cc.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>
+
+    
+
+
+    </div>
+    
+    </div>
+
+    <!-- Trending TVs -->
+    <div
+      class="tab-pane fade"
+      id="pills-tv"
+      role="tabpanel"
+      aria-labelledby="pills-contact-tab"
+    >
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/7cc.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>  
+
+     
+
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/7cc.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>
+
+      
+
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/7cc.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>
+    
+
+
+    </div>
+    
+    </div>
+
+    <!-- Trending TVs -->
+    <div
+      class="tab-pane fade"
+      id="pills-ts"
+      role="tabpanel"
+      aria-labelledby="pills-contact-tab"
+    >
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/2c.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>  
+
+     
+
+      <div class="col-md-4 text-center">
+        <img class="mb-2 img-fluid rounded-3" src="../../../assets/2c.jpg" alt="" />
+      <br />
+      <p class="m-2 text-center">
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        non suscipit facere commodi vero quod dolor tempora architecto modi
+        dolorum."
+      </p>
+      <button class="btn btn-outline-danger px-3 mb-2" (click)="next()">
+        Info
+      </button>
+      </div>
+
+    
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>

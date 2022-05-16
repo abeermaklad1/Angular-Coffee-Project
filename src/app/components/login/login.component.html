@@ -1,0 +1,150 @@
+<h3 class="m-3 text-center text-danger">Buy Your Coffee</h3>
+<!-- <button (click) = "sendData()" class="btn btn-danger m-2">Send Data</button> -->
+<div class="container text-center my-5 bg-light mb-5 pt-1">
+  <label class="my-2 text-warning" for="">Coffee Name</label>
+  <input
+    type="text"
+    class="form-control w-75 m-auto m-2"
+    placeholder="Enter your name"
+    [(ngModel)] = 'name'
+    [class.error-border] = "name.length < 3"
+    [class.success-border] = "name.length > 3"
+   
+  />
+  <p class="error-msg" *ngIf="name.length <= 3; else success">Invalid Name</p>
+  <ng-template #success> 
+      <p class="success-border">Valid Name</p>
+  </ng-template>
+  <!-- <label class="m-2 text-primary" for="">Product Image</label>
+  <input
+    type="text"
+    class="form-control w-75 m-auto m-2"
+    placeholder="Enter Product Image"
+    [(ngModel)] = 'image'
+   
+  /> -->
+  <label class="my-2 text-warning" for="">Price</label>
+  <input
+    type="number"
+    class="form-control w-75 m-auto m-2"
+    placeholder="Enter Price"
+    [(ngModel)] = 'price'
+    [class.error-border] = "price < 20"
+    [class.success-border] = "price > 20"
+   
+  />
+  <p class="error-msg" *ngIf="price < 20; else success">Invalid Price</p>
+  <ng-template #success> 
+      <p class="success-border">Valid Price</p>
+  </ng-template>
+  <label class="my-2 text-warning" for="">Quantity</label>
+  <input
+    type="number"
+    class="form-control w-75 m-auto m-2"
+    [(ngModel)] = 'quantity'
+    [class.error-border] = "quantity > 10"
+    [class.success-border] = "quantity < 10"
+   
+  />
+  <p class="error-msg" *ngIf="quantity > 10">Invalid Quantity</p>
+  <!-- <ng-template #success>  -->
+      <p class="success-border" [hidden] = "quantity > 10">Valid Quantity</p>
+  <!-- </ng-template> -->
+   
+  
+  <button class="btn btn-danger mt-5" (click) = "addStudent()">Add Coffee</button>
+  <!-- <p>{{ name }}</p>
+  <p>{{ age }}</p> -->
+  <br>
+  <br>
+  <div class="text-center ">
+    <table class="table table-light m-auto text-center w-50">
+        <thead class="mb-5">
+          <tr class="table-success">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="mb-5">
+          <tr *ngFor = "let product of products; index as i">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td><img class="w-25 h-25" src="../../../assets/a1.jpg" alt=""></td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td><button class="btn btn-info" (click) = "addProduct()">Buy</button></td>
+          </tr>
+          
+        </tbody>
+    </table>
+      <br>
+      <br>
+      <p class="" [class] = "pCount" >{{counter}} Coffee Purchased!</p>
+
+  </div>
+  <br>
+  <br>
+  
+  
+</div>
+
+<!-- 
+[value]="inputDefault"
+(keyup) = "detetChange($event)" -->
+<br>
+
+<h3 class="w-25 m-auto text-center text-danger">Our Products</h3>
+<br>
+<br>
+<!-- <h2 class="w-50 m-5 text-success">Data from Parent: {{receivedData}}</h2> -->
+<div class="text-center">
+  <button class="btn btn-success m-2">Coffee 1 </button>
+<button class="btn btn-success  m-2">Coffee 2 </button>
+<button class="btn btn-success m-2">Coffee 3 </button>
+<button class="btn btn-success m-2">Coffee 4 </button>
+</div>
+
+<div class="w-100 text-center">
+    <table class="table m-auto text-center w-75">
+        <thead class="mb-5">
+          <tr class="table-success">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Date</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Required Quantity</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="mb-5">
+          <tr 
+          *ngFor="let product of productst"
+          [class.d-none] = "product.quantity == 0"
+          [class.bg-light] = "product.quantity == 1"
+          >
+            <td>{{product.id}}</td>
+            <td>{{product.title | uppercase}}</td>
+            <td><img appLightbox class="w-25 h-25 rounded-2" [src]="product.imgUrl" alt=""></td>
+            <td>{{product.price | currency: "EUR"}}</td>
+            <td>{{myDate | date: "dd/mm/yy"}}</td>
+            <td>{{product.quantity}}</td>
+            <td><input #temp class="form-control" placeholder="Enter Quantity" type="number"></td>
+            <td><button class="btn btn-outline-danger" (click) = "buy(product.price, temp.value)">Buy</button></td>
+          </tr>
+          
+        </tbody>
+    </table>
+    <br>
+      <br>
+      <!-- <p class="" [class] = "pCount" >You Buy:  {{count}}</p> -->
+      <p class="" [class] = "pCountt" >Total Price is: <span class="text-danger">{{fullPrice}}</span></p>
+
+</div>
+<br>
+<br>

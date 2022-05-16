@@ -1,0 +1,38 @@
+.error-msg
+{
+    color: red;
+    /* border: 1px solid red; */
+    padding: 2px;
+    margin: 10px 0px;
+    border-radius: 2px;
+    margin: auto;
+    width: 75%;
+}
+.error-border
+{
+    border: 1px solid red;
+}
+.success-border
+{
+    /* border: 1px solid green; */
+    color: green;
+    padding: 2px;
+    margin: 10px 0px;
+    border-radius: 2px;
+    margin: auto;
+    width: 75%;
+}
+input
+{
+    margin-bottom: .5px !important;
+}
+th, td, tr
+{
+    /* margin: 240px !important; */
+    border-radius: 20px;
+
+}
+table
+{
+    border-radius: 20px;
+}

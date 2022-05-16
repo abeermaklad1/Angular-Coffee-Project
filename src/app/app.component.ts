@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstapp';
+  parentData:string = 'Data from Parent';
+  message:string = '';
+
+  receivedChildData(data:string){
+    this.message = data;
+  }
 }

@@ -1,0 +1,51 @@
+.slider
+{
+    width: 100%;
+    height: 80vh;
+}
+
+/************About*********************/
+.about a {
+    color: #000;
+    height: 42px;
+    width: 42px;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid #d4d4d4;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s;
+
+  }
+  
+  .about a:hover{
+    color: #e65f78;
+    border: 2px solid #e65f78;
+}
+.img-about
+{
+  border: 2px solid rgba(12, 3, 112, 0.125); 
+  box-shadow: 2px 2px 2px 4px #461e21;
+}
+/****************************************/
+.imgS
+{
+    width: 45%;
+    height: 300px;
+    border-radius: 20px;
+}
+.text
+{
+      font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+.nav-pills .nav-link.active{
+  background-color: brown !important;
+  color: #fff !important;
+
+}
+.nav-pills .nav-link
+{
+  color: brown !important;
+}

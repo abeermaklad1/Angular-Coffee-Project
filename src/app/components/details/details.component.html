@@ -1,0 +1,13 @@
+<h2 class="text-center m-4 text-danger">Our Branches</h2>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="card col-3 m-2" style="width: 18rem;" *ngFor="let user of users">
+            <img src="https://img.freepik.com/free-vector/espresso-coffee-cup-coffee-beans_79603-1038.jpg?size=626&ext=jpg" class="card-img-top rounded-2" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{user.name}}</h5>
+              <p class="card-text">{{user.email}}</p>
+              <a routerLink="/details/{{user.id}}" class=" btn btn-outline-danger">Details</a>
+            </div>
+        </div>
+    </div>
+</div>

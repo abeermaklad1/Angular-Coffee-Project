@@ -1,0 +1,28 @@
+<div class="container contain w-50 bg-light text-center rounded p-5 my-5">
+  <img class="img-fluid img-thumbnail w-50 m-2 imgStyle" src="../../../assets/mo2.gif" alt="">
+    <form [formGroup]="ourValidation">
+        <div class="mb-3 text-left">
+            <label for="exampleInputName" class="form-label fw-bolder">User Name</label>
+            <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Your Name" formControlName="username" [class.validMsg]="checkUsername">
+            <div class="form-text text-danger" *ngIf="!checkUsername && getUsername.touched">{{getUsername.errors | json}}</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputAge" class="form-label fw-bolder">Age</label>
+            <input type="number" class="form-control" id="exampleInputAge" placeholder="Enter Your Age" formControlName="age" [class.validMsg]="checkAge">
+            <div class="form-text text-danger" *ngIf="!checkAge && getAge.touched">{{getAge.errors | json}}</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label fw-bolder">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email" formControlName="email" [class.validMsg]="checkEmail">
+          <div class="form-text text-danger" *ngIf="!checkEmail && getEmail.touched">{{getEmail.errors | json}}</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label fw-bolder">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password" formControlName="password" [class.validMsg]="checkPassword">
+          <div class="form-text text-danger" *ngIf="!checkPassword && getPassword.touched">{{getPassword.errors | json}}</div>
+        </div>
+        <p>{{ourValidation.value | json}}</p>
+        <p>{{ ourValidation.controls["username"].errors |json}}</p>
+        <button type="submit" (click)="submitData()" class="btn btn btn-outline-danger fw-bolder">Submit</button>
+      </form>
+</div>
